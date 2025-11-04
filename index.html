@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompts para Calendario Sonoro</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Aplicamos la fuente Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Estilo para el scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* bg-gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* bg-gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* bg-gray-500 */
+        }
+    </style>
+    <!-- Configuración de dark mode para Tailwind -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Habilita el dark mode basado en la clase 'dark' en <html>
+            theme: {
+                extend: {
+                    // Añadimos animación de spin para el loader
+                    keyframes: {
+                        spin: {
+                            'to': { transform: 'rotate(360deg)' },
+                        }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 1.5s linear infinite',
+                        'pulse-subtle': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen antialiased">
+
+    <!-- Contenedor Principal -->
+    <div class="container mx-auto max-w-4xl p-5 md:p-10">
+
+        <!-- Encabezado -->
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-3">
+                Diario de Prompts: Calendario Sonoro IA
+            </h1>
+            <p class="text-lg text-gray-400">
+                Aquí documentaré los prompts que me vayas dando para generar tu calendario sonoro.
+            </p>
+        </header>
+
+        <!-- Contenedor de la Lista de Prompts -->
+        <h2 class="text-3xl font-bold text-center mb-8 text-purple-300">Historial de Prompts</h2>
+        <div id="prompt-list" class="space-y-8">
+            
+            <!-- Prompt 1 (Re-ordenado para claridad, aunque los números no sean secuenciales) -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 1: Reproductor Multimedia Local</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Concepto Inicial</span>
+                    </header>
+                    
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado:</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">actua como un desarrollador web con años de experiencia y hazme esto : Reproductor Multimedia Local
+Realizar un reproductor de audios locales con calendario.
+Los audios estarán en archivos locales.
+En el calendario se puede hacer click y que suene un audio en un dia específico.
+de la manera mas creativa posible</blockquote>
+
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        Este es el prompt inicial que define el proyecto. He procedido a crear la aplicación solicitada en `reproductor-calendario.html`.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Prompt 2 (Omitido del historial anterior, añadido para completar) -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 2: Concepto y Metadatos</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Expansión de Concepto</span>
+                    </header>
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado (consolidado):</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">Define el contenido principal (paisajes sonoros, domésticos, humanos) y los metadatos esenciales (Fecha, Hora, Ubicación, Descripción, Autor) y el contexto adicional (Emocional, Visual, Técnico).</blockquote>
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        Implementado. El modal de subida ahora captura estos metadatos (Hora, Ubicación, Autor, Descripción, Contexto) y el modal de visualización los muestra junto al reproductor.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Prompt 3 (Omitido del historial anterior, añadido para completar) -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 3: Panel de Ajustes</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Personalización</span>
+                    </header>
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado:</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">añadele una ruleta de ajustes para el usuario que tu veas arriba a la derecha , para darle personalizacion al usuario</blockquote>
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        Hecho. Se añadió un icono de engranaje que abre un panel con un interruptor de Modo Oscuro/Claro y una opción para cambiar el inicio de la semana (Lunes/Domingo).
+                    </p>
+                </div>
+            </article>
+
+            <!-- Prompt 4 -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 4: Persistencia de Datos y Mejoras UX</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Actualización Mayor</span>
+                    </header>
+                    
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado (consolidado desde imágenes):</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">añademe estas funciones:
+<strong>1. Persistencia con IndexedDB (La mejora más importante):</strong>
+- Problema: localStorage no sirve para archivos, los datos se pierden al recargar.
+- Solución: Usar IndexedDB para almacenar grandes cantidades de datos (Blobs).
+- Cómo: Crear una base de datos ("capsulaTiempoDB") con dos "Object Stores" (tablas):
+    - "mediaStore": Para guardar el objeto File (audio).
+    - "entriesStore": Para guardar los metadatos (descripción, tags, etc.) con el ID del archivo de audio.
+- Lógica:
+    - Al Cargar: Leer de IndexedDB para reconstruir el estado de la app.
+    - Al Guardar: Guardar primero el archivo en mediaStore, luego los metadatos en entriesStore.
+    - Al Reproducir: Buscar la entrada, obtener el ID del audio, buscar el audio en mediaStore, y crear un URL.createObjectURL() para el reproductor.
+
+<strong>2. Mejoras de Funcionalidad y UX:</strong>
+- Búsqueda y Filtro: Añadir una barra de búsqueda (para descripción, ubicación, etiquetas).
+- Vista de Lista / Diario: Añadir un botón para cambiar entre "Vista Calendario" y "Vista Lista" cronológica.
+- Notificaciones "Toast": Reemplazar alertas por notificaciones "toast" no intrusivas (ej: "Entrada guardada").
+- Recuerdos "En este día...": Notificación si existe una entrada para el día actual de años anteriores.
+
+<strong>3. Mejoras del Reproductor de Audio:</strong>
+- Control de Volumen.
+- Botones Siguiente / Anterior.
+- Visualizador de Audio (Web Audio API).
+
+<strong>4. Pequeñas Mejoras Visuales:</strong>
+- Botón "Hoy": Para volver al mes actual.
+- Indicador de Carga (Spinner): Al guardar en IndexedDB.
+- Tooltips.</blockquote>
+
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        ¡Este es el gran paso! He implementado las funciones más críticas de este prompt en `reproductor-calendario.html`:
+                        <br><br>
+                        1.  <strong>¡Persistencia con IndexedDB!</strong> La aplicación ahora usa una base de datos en el navegador. Tus audios y notas se guardan y se cargan automáticamente cada vez que abres la app.
+                        <br>
+                        2.  <strong>Notificaciones "Toast":</strong> He añadido un sistema de notificaciones en la esquina inferior para mensajes como "Audio guardado" o "Datos cargados".
+                        <br>
+                        3.  <strong>Botón "Hoy":</strong> Añadido junto a la navegación del mes para volver rápidamente al día actual.
+                        <br>
+                        4.  <strong>Indicador de Carga (Spinner):</strong> El botón "Guardar" ahora muestra un spinner mientras procesa y guarda el archivo en IndexedDB.
+                        <br><br>
+                        <strong>Próximos pasos:</strong> Las funciones de "Búsqueda", "Vista de Lista" y "Controles Avanzados de Audio" son las siguientes grandes tareas. He añadido los marcadores de UI para la búsqueda y el cambio de vista.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Prompt 5 -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 5: Comportamiento del Modal</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Pregunta de UX</span>
+                    </header>
+                    
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado:</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">porque cuando pincho una vez en un dia para poner el audio aparece el menu , pero si vuelvo a pinchar otro (el segundo) no me muestra el menu para poner el audio</blockquote>
+
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        ¡Muy buena observación! Esto que describes no es un error, sino el <strong>comportamiento esperado de un "modal"</strong>.
+                        <br><br>
+                        1.  Cuando haces clic en un día (Ej: Día 5), se abre el menú (el modal) y, muy importante, también aparece una <strong>capa semitransparente por detrás</strong> (llamada "backdrop") que cubre el resto de la página.
+                        <br>
+                        2.  Esta capa tiene una función: interceptar cualquier clic que hagas <strong>fuera</strong> del menú.
+                        <br>
+                        3.  Cuando intentas hacer clic en "otro día" (Ej: Día 6), en realidad estás haciendo clic en esa capa. La capa está programada para que, al recibir un clic, <strong>cierre el menú</strong>.
+                        <br><br>
+                        Es una medida de diseño estándar para obligar al usuario a terminar una acción (guardar o cancelar el audio del Día 5) antes de empezar una acción nueva (añadir audio al Día 6).
+                        <br><br>
+                        <strong>Solución:</strong> Simplemente cierra el menú actual (con "Cancelar" o clicando en la zona oscura) y luego haz clic en el nuevo día. ¡El menú aparecerá sin problemas!
+                    </p>
+                </div>
+            </article>
+
+            <!-- Prompt 6 -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 6: Integración de YouTube</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Nueva Función</span>
+                    </header>
+                    
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado:</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">añade tambien que aparte de que puedas subir el audio tambien puedas poner videos de youtube para que se escuche su audio</blockquote>
+
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        ¡Implementado! He modificado la aplicación `reproductor-calendario.html` para aceptar enlaces de YouTube.
+                        <br><br>
+                        1.  <strong>Modal de Subida:</strong> El menú para añadir una entrada ahora tiene dos pestañas: "Subir Archivo Local" y "Enlace de YouTube".
+                        <br>
+                        2.  <strong>Guardado:</strong> Si eliges "YouTube", la app extrae el ID del vídeo y lo guarda en la base de datos (en lugar de un archivo de audio).
+                        <br>
+                        3.  <strong>Reproducción:</strong> Al hacer clic en un día con un enlace de YouTube, el modal de visualización ahora muestra un reproductor de vídeo de YouTube incrustado.
+                        <br>
+                        4.  <strong>Lógica:</strong> La app distingue si la entrada es un archivo local (mostrando el reproductor de audio) o un vídeo de YouTube (mostrando el reproductor de vídeo).
+                    </p>
+
+                </div>
+            </article>
+
+            <!-- Prompt 8 -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 8: Funcionalidad Avanzada</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Refactorización y Funciones</span>
+                    </header>
+                    
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado (consolidado desde imágenes):</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">
+<strong>1. Mejoras en la Creación de Entradas:</strong>
+- Grabadora de Audio Integrada: Usar `MediaRecorder` API para grabar audio directamente en el modal.
+- Múltiples Entradas por Día: Modificar IndexedDB para usar un ID autoincremental en lugar de 'date' como `keyPath`. Convertir 'date' en un 'índice'.
+- Registro de "Estado de Ánimo": Añadir un selector de emojis o estrellas.
+- Soporte de Video Local: Permitir la subida de archivos de vídeo.
+
+<strong>2. Búsqueda y Visualización de Datos:</strong>
+- Barra de Búsqueda y Filtro: Para buscar por texto, ubicación o etiquetas.
+- Vista de "Línea de Tiempo" (Timeline/List): Una vista cronológica alternativa al calendario.
+- Mapa de Sonidos: Usar Leaflet.js para mostrar marcadores en un mapa.
+- Nube de Etiquetas (Tag Cloud).
+
+<strong>3. Mejoras del Reproductor y Audio:</strong>
+- Visualizador de Forma de Onda: Usar wavesurfer.js.
+- Modo "Playlist" o "Radio del Mes": Un botón para reproducir todas las entradas del mes.
+- Controles de Velocidad de Reproducción: (0.5x, 1x, 1.5x, 2x).
+
+<strong>4. Gestión de Datos y Estadísticas:</strong>
+- Backup y Restauración Completos (con Medios): Usar JSZip para empaquetar el JSON y los archivos de IndexedDB.
+- Página de Estadísticas: Nº total de entradas, espacio usado, gráfico de barras, etc.
+                    </blockquote>
+
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        ¡Este es un salto de gigante! He implementado las funciones más estructurales y naturales de esta solicitud en `reproductor-calendario.html`:
+                        <br><br>
+                        1.  <strong>¡Refactorización de IndexedDB!</strong> He migrado la base de datos a una nueva versión. La "tabla" de entradas ahora usa un <strong>ID autoincremental</strong> y un índice para la fecha. Esto significa que **¡ya puedes guardar múltiples entradas por día!**
+                        <br>
+                        2.  <strong>Grabadora de Audio Integrada:</strong> El modal de subida tiene una nueva pestaña "Grabar Audio" que usa la `MediaRecorder` API. ¡Puedes grabar, detener y pre-escuchar tu audio antes de guardarlo!
+                        <br>
+                        3.  <strong>Registro de "Estado de Ánimo":</strong> He añadido un selector de emojis simple al modal de subida.
+                        <br>
+                        4.  <strong>Control de Velocidad:</strong> El reproductor de audio ahora tiene un botón para cambiar la velocidad (0.5x, 1x, 1.5x, 2x).
+                        <br><br>
+                        <strong>Próximos pasos:</strong> Esta refactorización de la base de datos es el cimiento perfecto para crear la "Vista de Lista / Línea de Tiempo" y la "Búsqueda". Otras funciones como el "Mapa de Sonidos" (Leaflet), "Visualizador" (Wavesurfer) y "Backup" (JSZip) requerirán librerías externas que podemos añadir más adelante.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Prompt 9 -->
+            <article class="bg-gray-800 shadow-xl rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl">
+                <div class="p-6">
+                    <header class="flex justify-between items-center mb-3">
+                        <h3 class="text-xl font-semibold text-purple-400">Prompt 9: Mejoras Creativas y Estéticas</h3>
+                        <span class="text-xs bg-gray-700 text-gray-300 px-3 py-1 rounded-full">Experiencia y Emoción</span>
+                    </header>
+                    
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Prompt Enviado (consolidado desde imágenes):</label>
+                    <blockquote class="border-l-4 border-purple-500 bg-gray-900 p-4 rounded-r-md text-gray-200 italic shadow-inner whitespace-pre-wrap">
+<strong>1. Vistas de Datos Alternativas:</strong>
+- "Constelación Sonora": Una vista de "mapa estelar" con fondo de cielo nocturno. Cada entrada es una estrella. El color se basa en el estado de ánimo. El eje X es la línea de tiempo (año) y el eje Y es la hora del día.
+
+<strong>2. Interacciones Creativas y Descubrimiento:</strong>
+- "Ecos del Pasado": Mejorar el "Recuerdo" (toast) con una animación "fantasma" en la casilla del calendario de un año anterior.
+- "Mensaje en una Botella" (Cápsula Aleatoria): Un botón (cápsula o botella) que busca y reproduce una entrada al azar de toda la base de datos. Un "shuffle" de recuerdos.
+
+<strong>3. Mejoras Estéticas y Ambientales:</strong>
+- "Fondos Dinámicos":
+    - Por Hora del Día: El fondo degradado cambia sutilmente según la hora del sistema (mañana, mediodía, noche).
+    - Por Estado de Ánimo: Al reproducir, el fondo cambia al color asociado al estado de ánimo de la entrada.
+- "Visualizador en el Reproductor": Reemplazar la barra de progreso estática con una forma de onda (waveform) usando `wavesurfer.js`.
+- "Iconografía Temática":
+    - En el calendario, en lugar del icono genérico '🎵', mostrar el emoji del estado de ánimo de la entrada.
+    - Si hay múltiples entradas, mostrar un icono diferente o el emoji más frecuente.
+    - Esto da una "temperatura emocional" al mes.
+                    </blockquote>
+
+                    <label class="block text-sm font-medium text-gray-400 mt-4 mb-1">Notas / Resultados:</label>
+                    <p class="bg-gray-700 p-4 rounded-md text-gray-300 text-sm">
+                        ¡Estas ideas son fantásticas! He implementado las que tienen más impacto en la "sensación" de la app:
+                        <br><br>
+                        1.  <strong>¡Iconografía Temática Implementada!</strong> El calendario ahora muestra el emoji del estado de ánimo de la entrada de ese día. Si hay múltiples entradas, muestra un icono de "capas" (叠). ¡El calendario ahora tiene "temperatura emocional"!
+                        <br>
+                        2.  <strong>¡"Mensaje en una Botella" Implementado!</strong> He añadido un botón de "shuffle" (aleatorio) junto a la barra de búsqueda. Al hacer clic, la app seleccionará un recuerdo al azar de toda tu colección y lo reproducirá. ¡Perfecto para la serendipia!
+                        <br>
+                        3.  <strong>¡Fondos Dinámicos (por Hora) Implementado!</strong> El fondo de la aplicación ahora cambia sutilmente su degradado según la hora de tu sistema (mañana, mediodía, tarde, noche), creando un ambiente más inmersivo.
+                        <br><br>
+                        <strong>Próximos pasos:</strong> La "Constelación Sonora" y el "Visualizador de Audio" (wavesurfer.js) son los siguientes grandes pasos lógicos para mejorar la visualización de datos.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Los nuevos prompts que me pases se añadirán aquí -->
+
+        </div>
+
+        <!-- Mensaje de lista vacía (oculto) -->
+        <p id="empty-message" class="text-center text-gray-500 italic mt-10" style="display: none;">
+            Aún no hemos añadido ningún prompt. ¡Estoy listo cuando quieras empezar!
+        </p>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 mt-12 border-t border-gray-800">
+        <p class="text-sm text-gray-600">Página de documentación creada por tu Asistente IA. 2025.</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
